@@ -12,11 +12,5 @@ Before continuing to discuss the flags that characterize the component, we will 
 
 Between sending (1st Frame) and confirmation (2nd Frame), the CLK and CS signals remain at the logical 'HIGH' level for an arbitrary period of time. See the datagram:
 
-  -CS-   ------------___________________----____________________-------------
-
-
-  -CLK-  ------------_-_-_-_-_-_-_-_-_---------_-_-_-_-_-_-_-_-_-------------
-
-	
-  -MOSI- ------------< Trama 40 bits >---------< Trama 40 bits >-------------
+![Captura de pantalla 2024-04-25 110318](https://github.com/angelsz15/SPI_Vhdl_40bits/assets/167806623/0f8f188b-7ed6-4b54-b8aa-2d140042e107)
 
