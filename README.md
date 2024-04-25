@@ -1,4 +1,4 @@
-# SPI_Vhdl_40bits
+the # SPI_Vhdl_40bits
 
 A SPI module is used to send 40-bit frames to control and configure the TMC5130A stepper motor power driver.
 
@@ -10,4 +10,13 @@ The 'SPI_5_CS' component can control 5 drivers on the same SPI bus. This is achi
 
 Before continuing to discuss the flags that characterize the component, we will define what the sending cycle is. A sending cycle is completed when the SPI sends the same 40-bit frame twice. It is sent twice so that the slave can confirm the frame and respond in the next CS cycle.
 
-Between sending (1st Frame) and confirmation (2nd Frame), the CLK and CS signals remain at the logical 'HIGH' level for an arbitrary period of time.
+Between sending (1st Frame) and confirmation (2nd Frame), the CLK and CS signals remain at the logical 'HIGH' level for an arbitrary period of time. See the datagram:
+
+  -CS-   ------------___________________----____________________-------------
+
+
+  -CLK-  ------------_-_-_-_-_-_-_-_-_---------_-_-_-_-_-_-_-_-_-------------
+
+	
+  -MOSI- ------------< Trama 40 bits >---------< Trama 40 bits >-------------
+
