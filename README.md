@@ -1,4 +1,4 @@
-the # SPI_Vhdl_40bits
+# SPI_Vhdl_40bits
 
 A SPI module is used to send 40-bit frames to control and configure the TMC5130A stepper motor power driver.
 
