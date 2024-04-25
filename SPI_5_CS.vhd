@@ -35,7 +35,7 @@ entity SPI_5_CS is
  Port (    
            cs_mulplex_selector : in std_logic_vector (2 downto 0) ; -- This entrance select the chip select
            stop_flag : in std_logic ; -- This flag turn off the state machine for the SPI when the controller doesn't have more frames to send
-           enable_flag : out std_logic ; -- This flag send a pulse when state machine finish a cicle of sending (the cicle of sendind is definided in README.txt)  
+           enable_flag : out std_logic ; -- This flag sends a pulse when the state machine finishes sending a frame (independently of the sending cycle).
            FRAME_IN: in std_logic_vector (39 downto 0); -- This entrance set the full frame that is going to send for the drivers.
            start_flag : in std_logic;  -- This flag turn on the state machine for the SPI, the controller must send a pulse to the FPGA when it want to start the SPI communication to the drivers
            clk_FPGA : in std_logic;                        
