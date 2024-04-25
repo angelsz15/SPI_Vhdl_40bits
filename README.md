@@ -14,3 +14,10 @@ Between sending (1st Frame) and confirmation (2nd Frame), the CLK and CS signals
 
 ![Captura de pantalla 2024-04-25 110318](https://github.com/angelsz15/SPI_Vhdl_40bits/assets/167806623/0f8f188b-7ed6-4b54-b8aa-2d140042e107)
 
+Now let's talk about the flags of the component.
+
+1- stop_flag: This flag turn off the state machine for the SPI when the controller doesn't have more frames to send.
+
+2- enable_flag: This flag send a pulse when state machine finish a cicle of sending.
+
+3- start_flag: This flag turn on the state machine for the SPI, the controller must send a pulse to the FPGA when it want to start the SPI communication to the drivers
