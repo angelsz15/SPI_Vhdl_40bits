@@ -18,6 +18,6 @@ Now let's talk about the flags of the component.
 
 1- stop_flag: This flag turn off the state machine for the SPI when the controller doesn't have more frames to send.
 
-2- enable_flag: This flag send a pulse when state machine finish a cicle of sending.
+2- enable_flag: This flag sends a pulse when the state machine finishes sending a frame (independently of the sending cycle).
 
 3- start_flag: This flag turn on the state machine for the SPI, the controller must send a pulse to the FPGA when it want to start the SPI communication to the drivers
